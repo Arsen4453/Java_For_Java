@@ -1,0 +1,44 @@
+package com.javarush.task.task07.task0717;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/* 
+”дваиваем слова
+*/
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        // —читать строки с консоли и объ€вить ArrayList list тут
+        BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
+        ArrayList<String> list =new ArrayList<String>();
+
+        for (int i=0;i<10;i++)
+        {
+            list.add(reader.readLine());
+//if (reader.readLine()==nullbreak;
+        }
+
+
+// —читать строки с консоли и объ€вить ArrayList list тут
+
+        ArrayList<String> result = doubleValues(list);
+
+        for (int i=0;i < list.size();i++)
+            System.out.println(list.get(i));
+        // ¬ывести на экран result
+    }
+
+    public static ArrayList<String> doubleValues(ArrayList<String> list) {
+
+        for (int x=list.size();x>0;x--)
+        {
+            list.add(x,list.get(x-1));
+
+        }
+//напишите тут ваш код
+        return list;
+    }
+}

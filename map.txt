@@ -1,0 +1,28 @@
+package com.javarush.task.task08.task0802;
+
+/* 
+Map из 10 пар
+*/
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Solution {
+    public static void main(String[] args) {
+        //напишите тут ваш код
+        Map<String, String> myHashMap = new HashMap<String, String>();
+        myHashMap.put("арбуз" ,"€года");
+        myHashMap.put("банан","трава");
+        myHashMap.put("вишн€","€года");
+        myHashMap.put("груша","фрукт");
+        myHashMap.put("дын€","овощ");
+        myHashMap.put("ежевика","куст");
+        myHashMap.put("жень-шень","корень");
+        myHashMap.put("земл€ника","€года");
+        myHashMap.put("ирис", "цветок");
+        myHashMap.put("картофель","клубень");
+        for(Map.Entry<String, String> entry: myHashMap.entrySet())
+            System.out.println(entry.getKey() + " - " + entry.getValue());
+
+    }
+}

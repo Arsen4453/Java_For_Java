@@ -1,0 +1,47 @@
+package com.javarush.task.task07.task0713;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/*
+Играем в Jолушку, Arsen Skliarenko
+*/
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //напишите тут ваш код
+        Scanner in = new Scanner(System.in);
+
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> first = new ArrayList<>();
+        ArrayList<Integer> second = new ArrayList<>();
+        ArrayList<Integer> three = new ArrayList<>();
+
+        for(int i =0; i < 20; i++) {
+            list.add(in.nextInt());
+        }
+        for(int i :list) {
+            if(i%3==0) {
+                first.add(i);
+            }
+            if(i%2==0) {
+                second.add(i);
+            }
+            if(i%2!=0&&i%3!=0) {
+                three.add(i);
+            }
+
+        }
+        printList(list);
+        printList(first);
+        printList(second);
+        printList(three);
+    }
+
+    public static void printList(ArrayList<Integer> list) {
+        for (Integer i: list)
+            System.out.println(i);
+    }
+}
